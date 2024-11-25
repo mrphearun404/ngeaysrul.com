@@ -11,47 +11,99 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 /* Header Styling */
 header {
-    background: #290255;
-    color: #fff;
-    padding: 1rem 0;
-    position: relative;
-}
-
-header .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Center the entire header content horizontally */
+    align-items: center; /* Vertically align items */
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #1f0058; /* Dark background */
 }
 
-nav ul {
+/* Navigation Menu Styling */
+nav {
+    display: flex;
+    justify-content: center; /* Center the menu items horizontally */
+    width: 100%; /* Ensure the navigation is full width */
+}
+
+/* Menu List Styling */
+.menu {
+    display: flex;
+    justify-content: center; /* Center the items inside the menu */
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    gap: 15px; /* Adjust space between menu items */
 }
 
-nav ul li {
-    margin: 0;
+/* Menu List Item Styling */
+.menu li {
+    margin: 0 20px; /* Space between menu items */
 }
 
-nav ul li a {
-    color: #ffffff;
+.menu li a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
+    padding: 8px 10px;
+    transition: color 0.3s ease;
 }
 
-.header-logo {
-    max-width: 40px; /* Adjust logo size */
-    height: auto;
-    
+.menu li a:hover {
+    color: #f39c12; /* Orange color on hover */
 }
+
+/* Hamburger Icon (for mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Menu (Hamburger and Stack) */
+@media (max-width: 768px) {
+    /* Stack menu items vertically */
+    .menu {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #2c3e50;
+        width: 100%;
+        flex-direction: column;
+        display: none; /* Hide menu initially */
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 10px 0; /* Reduced space between items */
+    }
+
+    /* Menu item font size and padding adjustments for mobile */
+    .menu li a {
+        font-size: 1rem; /* Smaller font size */
+        padding: 6px 8px; /* Reduced padding */
+    }
+
+    /* Show hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* Show menu when toggled */
+    .menu.show {
+        display: flex;
+    }
+}
+
+
+
 
 
 section {
@@ -425,4 +477,98 @@ footer {
     }
 }
 
+/* Scroll-to-top button styling */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f39c12; /* Orange background */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
 
+#scrollToTopBtn:hover {
+    background-color: #e67e22; /* Slightly darker on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50; /* Dark background for the footer */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 30%;
+    margin: 10px 0;
+}
+
+/* Quick Links Section */
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.quick-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin: 5px 0;
+}
+
+.quick-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.quick-links li a:hover {
+    color: #f39c12; /* Hover effect for links */
+}
+
+/* Social Links Section */
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin: 5px 0;
+}
+
+.social-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: #f39c12; /* Hover effect for social links */
+}
+
+/* Responsive Styling for Footer */
+@media (max-width: 768px) {
+    .footer-section {
+        width: 100%; /* Stack the footer sections vertically on smaller screens */
+        text-align: center;
+    }
+}

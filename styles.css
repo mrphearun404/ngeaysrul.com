@@ -15,7 +15,7 @@ body {
 
 /* Header Styling */
 header {
-    background: #ffffff;
+    background: #290255;
     color: #fff;
     padding: 1rem 0;
     position: relative;
@@ -27,38 +27,24 @@ header .container {
     align-items: center;
 }
 
-/* Navigation Menu Styling */
-nav {
-    display: flex;
-    justify-content: center; /* Center the menu items horizontally */
-    align-items: center; /* Align menu items vertically */
-    width: 100%;
-}
-
-/* Menu List Styling */
-.menu {
-    display: flex;
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 15px; /* Adjust space between menu items */
 }
 
-/* Menu List Item Styling */
-.menu li {
-    margin: 0 20px; /* Space between menu items */
+nav ul li {
+    margin: 0;
 }
 
-.menu li a {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
+nav ul li a {
+    color: #ffffff;
     text-decoration: none;
-    padding: 8px 10px;
-    transition: color 0.3s ease;
-}
-
-.menu li a:hover {
-    color: #f39c12; /* Orange color on hover */
+    font-weight: bold;
+    text-align: center;
+    display: flex;
 }
 
 .header-logo {
@@ -88,7 +74,7 @@ section {
 }
 
 .service-item img {
-    max-width: 200px;
+    max-width: 250px;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -220,7 +206,7 @@ footer {
 /* Banner Section Styling */
 .banner {
     background: url('images/banner.png') no-repeat center center/cover;
-    height: 400px; /* Adjust height as needed */
+    height: 500px; /* Adjust height as needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -438,4 +424,5 @@ footer {
         grid-template-columns: 1fr; /* One post per row */
     }
 }
+
 

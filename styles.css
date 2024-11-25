@@ -422,26 +422,4 @@ footer {
         grid-template-columns: 1fr; /* One post per row */
     }
 }
-/* Add animation to sections */
-@keyframes jumpIn {
-    0% {
-        transform: translateY(50px); /* Start below the page */
-        opacity: 0; /* Make it invisible initially */
-    }
-    100% {
-        transform: translateY(0); /* End at normal position */
-        opacity: 1; /* Make it visible */
-    }
-}
-
-/* Class to trigger the animation */
-.animate {
-    animation: jumpIn 0.6s ease-out forwards; /* Adjust timing and easing for effect */
-}
-
-/* Initially hide the sections */
-.section {
-    opacity: 0;
-    transform: translateY(50px);
-}
 
